@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: nazaryevo-route-bot
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: YANDEX_RASP_API_KEY
+        sync: false
+      - key: WEBHOOK_SECRET
+        generateValue: true
+      - key: BOT_MODE
+        value: webhook
+      - key: TRANSFER_MIN
+        value: "3"
+      - key: RETURN_TRANSFER_MIN
+        value: "3"
+      - key: ODINTSOVO_TRANSFER_MIN
+        value: "5"

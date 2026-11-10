@@ -1,0 +1,5 @@
+.env
+*.log
+.poll-offset
+node_modules/
+.directions.json
